@@ -31,7 +31,7 @@ function showQuestion(question){
     questionElement.innerText = question.question
     question.answers.forEach(answer =>{
         const button = document.createElement("button");
-        button.innerText = answer.text;
+        button.innerText = answer.text + "here";
         button.classList.add("btn");
         if(answer.correct){
             button.dataset.correct = answer.correct;
@@ -53,6 +53,9 @@ function resetState(){
 function selectAnswer(e){
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct;
+    console.log("e.target.dataset",e.target.dataset);
+    console.log("e.target.dataset.correct",e.target.dataset.correct);
+    console.log("e.target.dataset.wrong",e.target.dataset.wrong);
     setStatusClass(document.body, correct);
     Array.from(answerButtonElement.children).forEach(button =>{
         setStatusClass(button, button.dataset.correct);
