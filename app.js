@@ -15,7 +15,8 @@ nextButton.addEventListener("click", ()=>{
 
 function startGame(){
     startButton.classList.add("hide");
-    shuffledQuestions = questions.sort(()=> Math.random() - .5)
+    shuffledQuestions = questions.sort(()=> Math.random()*10 - 5)
+    console.log(shuffledQuestions)
     currentQuestionIndex = 0;
     questionContainer.classList.remove("hide");
     setNextQuestion();
