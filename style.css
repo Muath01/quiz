@@ -69,6 +69,19 @@ body.wrong{
 
 }
 
-.hello{
-    background-color: pink;
+
+.start-btn, .next-btn{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide{
+    display: none;
 }
